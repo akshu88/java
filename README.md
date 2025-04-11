@@ -33,3 +33,5 @@ alt +tab: to change tabs
 javac [filename.java]
 
 java [filename.java] : it will show the output
+
+
