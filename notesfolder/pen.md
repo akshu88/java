@@ -1,0 +1,1 @@
+- if statement performs a block of code if it's condition is true
