@@ -37,6 +37,5 @@ public class weight {
         System.out.println("That was not a valid choice");
     }
 
-
     }
 }
