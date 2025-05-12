@@ -16,8 +16,7 @@ public class game {
         int attempts = 0;
         int min = 1;
         int max = 100;
-        int randomNumber = random.nextInt(min,max + 1);
-
+        int randomNumber = random.nextInt(max - min + 1) + min;
         System.out.println("Number Guessing Game");
         System.out.printf("Guess a number between %d-%d\n ", min ,max);
 
