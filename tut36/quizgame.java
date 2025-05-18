@@ -47,10 +47,9 @@ public class quizgame {
                 System.out.println("WRONG!");
             }
         }
-
+        
         System.out.println("You got " + score + " out of " + questions.length + " questions correct!");
 
-        
         sc.close();
 
     }
