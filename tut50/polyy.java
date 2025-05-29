@@ -20,6 +20,5 @@ public class polyy {
         for(Vehicle vehicle : vehicles){
             vehicle.go();
         }
-        
-}
+    }
 }
