@@ -24,14 +24,12 @@ public class MusicPlayer {
             Clip clip = AudioSystem.getClip();
             clip.open(audioStream);
 
-            
-
             String response = "";
 
             while (!response.equals("Q")) {
                 System.out.println("P = Play");
                 System.out.println("S = Stop");
-                System.out.println("R = Rset");
+                System.out.println("R = Reset");
                 System.out.println("Q = Quit");
                 System.out.print("Enter your choice: ");
 
