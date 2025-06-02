@@ -1,7 +1,6 @@
-package minipro;
+package miniProject;
 
 public class PrideWisher {
-
     public static void main(String[] args) {
         // Fixed names
         String sender = "Akshita";
@@ -32,7 +31,7 @@ public class PrideWisher {
 
         // Flirty message with typewriter effect
         typeWriter("Hey " + receiver + ",");
-        typeWriter("You randomly popped into my head... and honestly, I don't mind it.");
+        typeWriter("You randomly popped into my head... and honestly, I didn’t mind it.");
         typeWriter("Pride Month felt like the perfect excuse to tell you — you're kinda hard to ignore.");
         typeWriter("I mean, that smile? That energy? You're seriously something else.");
         typeWriter("Anyway, no pressure. Just... if you're smiling right now, maybe text me back? :)");
@@ -50,7 +49,7 @@ public class PrideWisher {
         for (char c : message.toCharArray()) {
             System.out.print(c);
             try {
-                Thread.sleep(40); // 30 ms delay for typing effect
+                Thread.sleep(30); // 30 ms delay for typing effect
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
@@ -58,3 +57,5 @@ public class PrideWisher {
         System.out.println();
     }
 }
+
+

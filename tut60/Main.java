@@ -1,24 +1,20 @@
 package tut60;
-
+import javax.sound.sampled.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
+public class Main {
 
-public class MusicPlayer {
     public static void main(String[] args) {
+
         // How to PLAY AUDIO with Java (.wav, .au, .aiff)
 
         String filePath = "C:\\Users\\dell\\OneDrive\\Desktop\\GITHUB\\java\\tut60\\Glass Chinchilla - The Mini Vandals.wav";
         File file = new File(filePath);
 
-        try(Scanner scanner = new Scanner(System.in); 
+        try(Scanner scanner = new Scanner(System.in);
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(file)){
 
             Clip clip = AudioSystem.getClip();
@@ -26,7 +22,8 @@ public class MusicPlayer {
 
             String response = "";
 
-            while (!response.equals("Q")) {
+            while(!response.equals("Q")){
+
                 System.out.println("P = Play");
                 System.out.println("S = Stop");
                 System.out.println("R = Reset");
@@ -35,24 +32,13 @@ public class MusicPlayer {
 
                 response = scanner.next().toUpperCase();
 
-                switch (response) {
-                    case "P":
-                        clip.start();
-                        break;
-                    case "S":
-                        clip.stop();
-                        break;
-                    case "R":
-                        clip.setMicrosecondPosition(0);
-                        break;
-                    case "Q":
-                        clip.close();
-                        break;
-                    default:
-                        System.out.println("Invalid choice");
-                        break;
+                switch(response){
+                    case "P" -> clip.start();
+                    case "S" -> clip.stop();
+                    case "R" -> clip.setMicrosecondPosition(0);
+                    case "Q" -> clip.close();
+                    default -> System.out.println("Invalid choice");
                 }
-
             }
         }
         catch(FileNotFoundException e){
@@ -68,8 +54,8 @@ public class MusicPlayer {
             System.out.println("Something went wrong");
         }
         finally{
-            System.out.println("BYE!");
+            System.out.println("Bye!");
         }
-
     }
 }
+
